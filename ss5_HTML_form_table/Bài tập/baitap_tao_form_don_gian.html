@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="action_page.php">
+    <table bordercolor="blue" cellpadding="15" cellspacing="1">
+        <tr>
+            <th style="color: white; background-color:red; font-size:30px;" align="center" colspan="3">SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+            <td style="color:blue" align="right">Họ và tên</td>
+            <td><input type=text" name="uername" ></td>
+        </tr>
+            <td style="color:blue" align="right">Email</td>
+            <td><input type="text" name="email"></td>
+        <tr>
+            <td style="color:blue" align="right">Sở thích</td>
+            <td style="color:red">
+                <input type="checkbox" name="Thể thao" value="sport">Thể thao
+                <input type="checkbox" name="Âm nhạc" value="music">Âm nhạc
+                <input type="checkbox" name="Đọc sách" value="book">Đọc sách
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color:red">
+                <input type="checkbox" name="Lướt web" value="web">Lướt web
+                <input type="checkbox" name="Chơi game" value="game">Chơi game
+                <input type="checkbox" name="Điện ảnh" value="phim">Điện ảnh
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color:red">
+                <input type="checkbox" name="Du lịch" value="travel">Du lịch
+            </td>
+         </tr>
+         <tr>
+             <td></td>
+             <td>
+                 <button type="submit" >Gửi thông tin</button>
+                 <button type="reset" >Nhập lại</button>
+             </td>
+         </tr>
+    </table>
+</form>
+<form action="action_page.php">
+    <table bgcolor="lemonchiffon" cellpadding="15" cellspacing="1">
+        <tr>
+            <th style="color: blue; background-color:mediumspringgreen; font-size:30px;" colspan="3">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Họ và tên</td>
+            <td><input type=text" name="uername"></td>
+        </tr>
+            <td style="color:blue" align="left">Ngày sinh</td>
+            <td><input type="text" name="birth"></td>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Giới tính</td>
+            <td>
+                <input type="radio" name="male" value="gender">Nam
+                <input type="radio" name="female" value="gender">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Địa chỉ</td>
+            <td><textarea rows="4" cols="30" name="description"></textarea></td>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Lớp</td>
+            <td>
+                <select name="dropdown"
+                        <option value="class">chọn lớp</option>
+                        <option value="class">class A</option>
+                        <option value="class">class B</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td style="color:blue" align="left">Điện thoại</td>
+            <td><input type="text" name="phonenumber"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" >Đăng ký</button>
+                <button type="reset" >Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
