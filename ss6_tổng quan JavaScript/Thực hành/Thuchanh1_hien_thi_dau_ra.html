@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="showMessage1();">Click Me Function1!</button>
+
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage2();">Click Me function2!</button>
+
+<button type="button" onclick="showMessage3();">Click Me function3!</button>
+
+<button type="button" onclick="showMessage4();">Click Me Funtion4!</button>
+<script>
+    function showMessage1() {
+        alert('Xin chào Messegage1!');
+    }
+
+    function showMessage2() {
+        document.getElementById('messageDiv').innerHTML = 'Xin chào  Messegage2!';
+    }
+
+    function showMessage3() {
+        document.write('Xin chào  Messegage3!');
+    }
+
+    function showMessage4() {
+        console.log('Xin chào  Messegage4!');
+    }
+
+</script>
+</body>
+</html>
