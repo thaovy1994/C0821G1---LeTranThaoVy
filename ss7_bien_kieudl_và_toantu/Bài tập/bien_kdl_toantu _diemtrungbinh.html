@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+average is: <h1 id="average"></h1>
+total: <h1 id="total"></h1>
+<script>
+    let Physis;
+    let Chemistry;
+    let Biology;
+
+    Physis = parseFloat(prompt("Enter Physis"));
+    Chemistry = parseFloat(prompt("Enter Chemistry:"));
+    Biology = parseFloat(prompt("Enter Biology:"));
+
+    let average = (Physis + Chemistry + Biology) / 3;
+    let total = Physis + Chemistry + Biology;
+
+    document.getElementById('average').innerText = average;
+    document.getElementById('total').innerText = total;
+</script>
+</body>
+</html>

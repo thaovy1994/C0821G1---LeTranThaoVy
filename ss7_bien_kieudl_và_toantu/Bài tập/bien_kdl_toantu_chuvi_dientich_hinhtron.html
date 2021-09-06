@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+area: <h1 id="area"></h1>
+perimeter: <h1 id="perimeter"></h1>
+<script>
+    let r;
+    const PI = 3.14;
+
+    r = parseInt(prompt("Enter bán kính:"));
+
+    let area = r*r*PI;
+    let perimeter = 2*r*PI;
+
+    document.getElementById('area').innerText = area;
+    document.getElementById('perimeter').innerText = perimeter;
+</script>
+</body>
+</html>

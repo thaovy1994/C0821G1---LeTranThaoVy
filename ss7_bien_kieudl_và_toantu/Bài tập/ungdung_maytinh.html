@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="Caculator">
+    <h1>Caculator</h1>
+    <p>
+        <input type="text" id="so1"></input>
+        <input type="text" id="so2"></input>
+    </p>
+    <p>
+        <button onclick="addition()">addition (+)</button>
+        <button onclick="subtraction()">addition (-)</button>
+        <button onclick="multiplication()">multiplication (x)</button>
+        <button onclick="division()">division (/)</button>
+    </p>
+    <br>
+    Result <h1 id="result"></h1>
+</form>
+
+<script>
+    function addition() {
+        let so1= document.getElementById('so1').value;
+        let so2= document.getElementById('so2').value;
+        let cong = so1 + so2;
+
+        document.getElementById('result').innerText = cong;
+    }
+    function subtraction() {
+        let so1= document.getElementById('so1').value;
+        let so2= document.getElementById('so2').value;
+        let tru = so1 - so2;
+        document.getElementById('result').innerText = tru;
+    }
+
+    function multiplication() {
+        let so1= document.getElementById('so1').value;
+        let so2= document.getElementById('so2').value;
+        let nhan = so1*so2;
+        document.getElementById('result').innerText = nhan;
+    }
+
+    function division() {
+        let so1= document.getElementById('so1').value;
+        let so2= document.getElementById('so2').value;
+        let chia = so1/so2;
+        document.getElementById('result').innerText = chia;
+    }
+
+</script>
+</body>
+</html>
