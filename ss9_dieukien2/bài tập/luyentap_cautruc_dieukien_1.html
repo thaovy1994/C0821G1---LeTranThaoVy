@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập a: "));
+    let b = parseInt(prompt("Nhập b: "));
+    if (a % b == 0) {
+        alert('a chia hết cho b')
+    }
+
+    let age = parseInt(prompt("Nhập tuổi của học sinh"));
+    if (age < 15) {
+        alert('học sinh chưa đủ điều kiện vào lớp 10')
+    }
+
+    let n = parseInt(prompt("Nhập n: "));
+    if (n < 0) {
+        alert("số nguyên bé hơn 0")
+    } else {
+        alert('số nguyên lớn hơn 0')
+    }
+
+    let n1 = parseInt(prompt("n1: "));
+    let n2 = parseInt(prompt("n2: "));
+    let n3 = parseInt(prompt("n3: "));
+    if (n1 > n2) {
+        if (n1 > n3) {
+            alert('n1 lớn nhất')
+        } else {
+            alert('n3 lớn nhất')
+        }
+    } else {
+        if (n2 > n3) {
+            alert('n2 lớn nhất')
+        } else {
+            alert('n3 lớn nhất')
+        }
+    }
+
+    let DiemKiemTra = parseFloat(prompt("DiemKiemTra: "));
+    let DiemGiuaKy = parseFloat(prompt("DiemGiuaKy: "));
+    let DiemCuoiKy = parseFloat(prompt("DiemCuoiKy: "));
+    let average = (DiemKiemTra + DiemGiuaKy * 2 + DiemCuoiKy * 3) / 6;
+    if (average >= 8) {
+        alert('Học sinh giỏi')
+    } else if {
+    (average >= 6.5)
+        alert('Học sinh khá')
+    } else if (average > 5) {
+        alert('Học sinh trung bình')
+    } else {
+        alert('Học sinh Yếu')
+    }
+</script>
+</body>
+</html>
