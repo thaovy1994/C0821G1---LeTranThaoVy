@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="hinh-nen-mau-1.jpg" onclick="changeImg(1)" id="mau1" width="250 px" height="600 px">
+<img src="hinh-nen-mau-2.jpg" onclick="changeImg(2)" id="mau2" width="250 px" height="600 px">
+<img src="hinh-nen-mau-3.jpg" onclick="changeImg(3)" id="mau3" width="250 px" height="600 px">
+<img src="hinh-nen-mau-4.jpg" onclick="changeImg(4)" id="mau4" width="250 px" height="600 px">
+<img src="hinh-nen-mau-5.jpg" onclick="changeImg(5)" id="mau5" width="250 px" height="600 px">
+<script>
+    function changeImg(num) {
+        let img1 = document.getElementById('mau1').getAttribute('src');
+        let img2 = document.getElementById('mau2').getAttribute('src');
+        let img3 = document.getElementById('mau3').getAttribute('src');
+        let img4 = document.getElementById('mau4').getAttribute('src');
+        let img5 = document.getElementById('mau5').getAttribute('src');
+        switch (num) {
+            case 1: {
+                if (img1 === "hinh-nen-mau-1.jpg") {
+                    document.getElementById('mau1').src = "hinh-nen-mau-2.jpg";
+                } else if (img1 === "hinh-nen-mau-2.jpg") {
+                    document.getElementById('mau1').src = "hinh-nen-mau-3.jpg";
+                } else {
+                    document.getElementById('mau1').src = "hinh-nen-mau-1.jpg";
+                }
+                break;
+            }
+            case 2: {
+                if (img2 === "hinh-nen-mau-2.jpg") {
+                    document.getElementById('mau2').src = "hinh-nen-mau-3.jpg";
+                } else if (img2 === "hinh-nen-mau-3.jpg") {
+                    document.getElementById('mau2').src = "hinh-nen-mau-4.jpg";
+                } else {
+                    document.getElementById('mau2').src = "hinh-nen-mau-1.jpg";
+                }
+                break;
+            }
+
+            case 3: {
+                if (img3 === "hinh-nen-mau-3.jpg") {
+                    document.getElementById('mau3').src = "hinh-nen-mau-4.jpg";
+                } else if (img3 === "hinh-nen-mau-4.jpg") {
+                    document.getElementById('mau3').src = "hinh-nen-mau-5.jpg";
+                } else {
+                    document.getElementById('mau3').src = "hinh-nen-mau-1.jpg";
+                }
+                break;
+            }
+
+            case 4: {
+                if (img4 === "hinh-nen-mau-4.jpg") {
+                    document.getElementById('mau4').src = "hinh-nen-mau-5.jpg";
+                } else if (img4 === "hinh-nen-mau-5.jpg") {
+                    document.getElementById('mau4').src = "hinh-nen-mau-1.jpg";
+                } else {
+                    document.getElementById('mau4').src = "hinh-nen-mau-4.jpg";
+                }
+                break;
+            }
+
+            case 5: {
+                if (img5 === "hinh-nen-mau-5.jpg") {
+                    document.getElementById('mau5').src = "hinh-nen-mau-1.jpg";
+                } else if (img5 === "hinh-nen-mau-1.jpg") {
+                    document.getElementById('mau5').src = "hinh-nen-mau-2.jpg";
+                } else {
+                    document.getElementById('mau5').src = "hinh-nen-mau-5.jpg";
+                }
+                break;
+            }
+
+                if (document.getElementById('mau1').getAttribute('src') === "hinh-nen-mau-1.jpg"
+                    && document.getElementById('mau2').getAttribute('src') === "hinh-nen-mau-2.jpg"
+                    && document.getElementById('mau3').getAttribute('src') === "hinh-nen-mau-3.jpg"
+                    && document.getElementById('mau4').getAttribute('src') === "hinh-nen-mau-4.jpg"
+                    && document.getElementById('mau5').getAttribute('src') === "hinh-nen-mau-5.jpg") {
+
+                    alert("Đã hoàn thành bộ 1!!!")
+                }
+        }
+
+    }
+
+</script>
+</body>
+</html>

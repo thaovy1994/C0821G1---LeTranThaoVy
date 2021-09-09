@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>yes</button>
+<button id="no" style="position:relative" onmouseover="moveButton()">no</button>
+<script>
+   function moveButton() {
+       let x = Math.random()*window.innerWidth;
+       let y = Math.random()*window.innerHeight;
+       document.getElementById('no').style.left= x + 'px';
+       document.getElementById('no').style.top= x + 'px';
+   }
+</script>
+</body>
+</html>
