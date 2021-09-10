@@ -2,68 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .calculator {
-            width: 400px;
-            margin: 10px auto;
-        }
-
-        .calculator__keys {
-            width: 100%;
-
-        }
-
-        div button {
-            width: 23%;
-            height: 30px;
-            margin-top: 5px;
-            display: inline-block;
-        }
-
-        div .key--equal {
-            height: 30px;
-            float: right;
-            margin-right: 20px;
-        }
-
-        div button[data-action="clear"] {
-
-        }
-
-        .calculator__display {
-            width: 90%;
-            border: 1px solid black;
-            padding: 5px 7px;
-            text-align: right;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Máy tính đơn bản</title>
 </head>
 <body>
-<div class="calculator">
-    <div class="calculator__display">0</div>
-    <div class="calculator__keys">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="key--operator" data-action="add">+</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="key--operator" data-action="subtract">-</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="key--operator" data-action="multiply">&times;</button>
-        <button data-action="clear">C</button>
-        <button>0</button>
-        <button class="key--equal" data-action="calculate">=</button>
-        <button class="key--operator" data-action="divide">/</button>
-    </div>
-</div>
-<script>
+<table border="1" cellpadding="20" >
+    <tr>
+        <td colspan="4" style="height: 20px"><span id="dis">0</span></td>
+    </tr>
+    <tr>
 
+        <td onclick="display(1)">1</td>
+        <td onclick="display(2)">2</td>
+        <td onclick="display(3)">3</td>
+        <td onclick="display('+')" style="background: orange">+</td>
+    </tr>
+    <tr>
+        <td onclick="display(4)">4</td>
+        <td onclick="display(5)">5</td>
+        <td onclick="display(6)">6</td>
+        <td onclick="display('-')" style="background: orange">-</td>
+    </tr>
+    <tr>
+        <td onclick="display(7)">7</td>
+        <td onclick="display(8)">8</td>
+        <td onclick="display(9)">9</td>
+        <td onclick="display('*')" style="background: orange">x</td>
+    </tr>
+    <tr>
+        <td onclick="reset()" style="background: orange">C</td>
+        <td onclick="display(0)" style="background: orange">0</td>
+        <td onclick="display('=')" style="background: orange">=</td>
+        <td onclick="display('/')" style="background: orange">/</td>
+</table>
+<script>
+    let number = '';
+
+    function display(keyboard) {
+        if (keyboard === '=') {
+            document.getElementById('dis').innerText = eval(number);
+
+        } else {
+            number += keyboard;
+            document.getElementById('dis').innerText = number;
+        }
+
+    }
+    function reset() {
+        number=''
+        document.getElementById('dis').innerText = number;
+    }
 </script>
 </body>
 </html>
