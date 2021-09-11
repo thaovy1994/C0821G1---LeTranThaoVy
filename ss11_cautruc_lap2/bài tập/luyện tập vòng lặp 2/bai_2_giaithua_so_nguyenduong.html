@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Cho số n, tính giai thừa của số nguyên dương n.//
+    //n! = n x (n - 1) x (n-2) .... 4 x 3 x 2 x 1//
+    //Đặc biệt, với n = 0, người ta quy ước 0! = 1.//
+    let n = parseInt(prompt('Mời bạn nhập n: '));
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result = result * i;
+        document.write(result + "<br>");
+    }
+</script>
+</body>
+</html>

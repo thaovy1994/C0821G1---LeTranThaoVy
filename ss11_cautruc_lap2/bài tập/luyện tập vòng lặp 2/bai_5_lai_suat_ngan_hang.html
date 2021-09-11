@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con)//
+    //Tiền gốc hàng tháng = Số tiền vay/Số tháng vay.
+    //Tiền lãi tháng đầu = Số tiền vay * Lãi suất vay theo tháng.//
+    //Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại * Lãi suất vay.//
+
+    let loan = parseInt(prompt("Tiến vay ban đầu: "));
+    let month = parseInt(prompt("Số tháng vay: "));
+    let interest_rate = parseInt(prompt("Lãi suất hàng tháng bn %: "));
+    let interest = 0;
+    for (i = 0; i <= month; i++) {
+        let interest = (loan - interest) * interest_rate / month;
+        document.write(interest + "<br>");
+    }
+</script>
+</body>
+</html>

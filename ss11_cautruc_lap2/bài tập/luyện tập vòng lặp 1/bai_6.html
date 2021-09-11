@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.//
+    for (let i = 0; i <= 204; i++) {
+        if (i % 7 == 0) {
+            document.write(i + '<br>');
+        }
+    }
+    const numbers = [0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98, 105, 112, 119, 126, 133, 140, 147, 154, 161, 168, 175, 182, 189, 196, 203]
+    let sum = 0;
+    numbers.forEach(function (element) {
+        sum += element;
+    });
+    document.write('Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên ' + sum);
+</script>
+</body>
+</html>
