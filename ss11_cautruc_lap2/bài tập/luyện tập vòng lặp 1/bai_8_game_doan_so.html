@@ -5,20 +5,22 @@
     <title>Hãy thử đoán xem</title>
 </head>
 <body>
-<button id="playgame" onclick="guess()">Chơi</button>
+<button onclick="guess()">Chơi</button>
 <script>
     function guess() {
         let a = Math.floor(Math.random() * 9);
-        let x = parseInt(prompt("Nhập số bạn đoán: "));
-        if (x == a) {
-            alert('Chúc mừng bạn');
-        } else if (x < a) {
-            alert('bé hơn');
-        } else {
-            alert('lớn hơn');
+        for (let i = 1; i <= 3; i++) {
+            let x = parseInt(prompt("Nhập số bạn đoán: "));
+            if (x == a) {
+                alert('Chúc mừng bạn');
+                break;
+            } else if (x < a) {
+                alert('bé hơn');
+            } else {
+                alert('lớn hơn');
+            }
         }
     }
-
 </script>
 </body>
 </html>

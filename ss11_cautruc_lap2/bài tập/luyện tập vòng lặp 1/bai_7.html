@@ -5,24 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<p id="result"></p>
 <script>
     //Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100.
     // Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
     // Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
 
     for (let i = 1; i <= 100; i++) {
-        document.write(i + '<br>');
-        if (i % 3 === 0) {
-            for (let number in {Fizz: i})
-                document.write(number + '<br>');
-        }
-        if (i % 5 === 0) {
-            for (let number in {Buzz: i})
-                document.write(number + '<br>');
-        }
-        if (i % 5 == 0 && i % 3 == 0) {
-            for (let number in {FizzBuzz: i})
-                document.write(number + '<br>');
+        if (i % 5 === 0 && i % 3 === 0) {
+            document.getElementById('result').innerHTML += "FizzBuzz" + "<br>";
+        } else if (i % 3 === 0) {
+            document.getElementById('result').innerHTML += "Fizz" + "<br>";
+        } else if (i % 5 === 0) {
+            document.getElementById('result').innerHTML += "Buzz" + "<br>";
+        } else {
+            document.getElementById('result').innerHTML += i + "<br>";
         }
     }
 </script>
