@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="English" placeholder="Eng"/>
+<button id="trans" onclick="trans()"/>
+Translate</button>
+<input type="text" id="display" placeholder="Viet"/>
+<script>
+    let Eng = ["dog", "cat", "bird"];
+    let Viet = ["chó", "mèo", "chim"];
+
+    function trans() {
+        let English = document.getElementById("English").value;
+        for (let i = 0; i < Eng.length; i++) {
+            if (English === Eng[i]) {
+                document.getElementById("display").innerHTML = 'Viet[i]';
+            }
+        }
+    }
+</script>
+</body>
+</html>
