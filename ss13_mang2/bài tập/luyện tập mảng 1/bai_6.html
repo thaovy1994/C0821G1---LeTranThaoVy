@@ -6,19 +6,26 @@
 </head>
 <body>
 <script>
-    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử
+    let array = Array(10);
+    let check = false;
+    for (let i = 0; i < array.length; i++) {
+        let number = parseInt(prompt('nhập số nguyên thứ ' + (i + 1)));
+        array[i] = number;
+    }
+    //nhập/tạo phần tử số nguyên V.
+    let v = parseInt(prompt('Nhập số nguyên v'));
     // Chương trình tìm xem V có nằm trong mảng số nguyên không?
     // Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
-    let array = Array(10);
-    let v;
-    for (i = 0; i < 10; i++) {
-        let array = prompt('Nhập vào số nguyên: ')
-        if (v === array) {
-            alert("V is in the array");
-
-        } else {
-            alert('V is not in the array')
+    for (let i = 0; i < array.length; i++) {
+        if (v === array[i]) {
+            check = true;
         }
+    }
+    if (check) {
+        alert('V is  in the array');
+    } else {
+        alert("V is not in the array");
     }
 
 </script>

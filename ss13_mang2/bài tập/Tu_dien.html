@@ -10,15 +10,20 @@
 Translate</button>
 <input type="text" id="display" placeholder="Viet"/>
 <script>
-    let Eng = ["dog", "cat", "bird"];
-    let Viet = ["chó", "mèo", "chim"];
+    let eng = ["dog", "cat", "bird"];
+    let viet = ["chó", "mèo", "chim"];
 
     function trans() {
         let English = document.getElementById("English").value;
-        for (let i = 0; i < Eng.length; i++) {
-            if (English === Eng[i]) {
-                document.getElementById("display").innerHTML = 'Viet[i]';
+        let check = false;
+        for (let i = 0; i < eng.length; i++) {
+            if (English === eng[i]) {
+                check = true;
+                document.getElementById("display").value = viet[i];
             }
+        }
+        if (check === false) {
+            document.write('Không tìm thấy');
         }
     }
 </script>

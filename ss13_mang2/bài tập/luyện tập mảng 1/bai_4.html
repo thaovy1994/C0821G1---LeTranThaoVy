@@ -7,11 +7,15 @@
 <body>
 <script>
     //Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
-    let array = [1,2,4,5];
-    for (let i = 1; i <= array.length;i++) {
+    let array = Array(4);
+    let result = [];
+    for (let i = 1; i <= array.length; i++) {
+        let number = parseInt(prompt('nhập vào số nguyên thứ' + i));
+        result.push(number);
 
     }
-    document.write("Dãy số nguyên đảo ngược là: " + array.reverse());
+    document.write('Dãy số nguyên nhập vào là: ' + result + '<br>');
+    document.write("Dãy số nguyên đảo ngược là: " + result.reverse());
 </script>
 </body>
 </html>

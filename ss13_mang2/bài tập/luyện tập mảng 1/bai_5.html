@@ -7,12 +7,15 @@
 <body>
 <script>
     // Viết chương trình đếm số nguyên âm trong một chuỗi
-    let str = "Hello World";
-    for (let i = 0; i <= str.length; i++) {
-        if (str === 'a' || str === 'e' || str === 'i' || str === 'o' || str === 'u')
-            }
-
-    document.write("số nguyên âm trong chuỗi trên là: " + );
+    let str = "Hello World Mina";
+    let arr = str.split('');
+    let count = 0;
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] === 'a' || arr[i] === 'e' || arr[i] === 'i' || arr[i] === 'o' || arr[i] === 'u') {
+            count++;
+        }
+    }
+    document.write("số nguyên âm trong chuỗi trên là: " + count);
 </script>
 </body>
 </html>
