@@ -8,7 +8,8 @@
 <script>
     //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
     let array = Array(3);
-    let result = [];
+    let index;
+    let check = false;
     for (let i = 0; i < array.length; i++) {
         let number = parseInt(prompt('nhập số nguyên thứ ' + (i + 1)));
         array[i] = number;
@@ -18,10 +19,17 @@
     // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
     for (let i = 0; i < array.length; i++) {
         if (v === array[i]) {
-            }
+            check = true;
+            index =i;
         }
-    result.push(array);
-    document.write(result.toString());
+    }
+    if (check) {
+        array.splice(index, 1);
+        array.push(0);
+        document.write(array.toString());
+    } else {
+        alert('v ko thuộc mảng')
+    }
 
 </script>
 </body>

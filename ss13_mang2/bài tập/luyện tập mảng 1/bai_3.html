@@ -7,20 +7,26 @@
 <body>
 <script>
     //Viết chương trình khởi tạo mảng số nguyên.
+    // Hiển hiện giá trị lớn nhất trong mảng đó.
+    // In ra giá trị trung bình của các phần tử trong mảng.
     let array = Array(3);
-    let max = array[0];
     let total = 0;
-    for (let i = 1; i <= array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         let number = parseInt(prompt('nhập số nguyên thứ ' + i));
-        // Hiển hiện giá trị lớn nhất trong mảng đó.
+        array[i] = number;
+    }
+    let max = array[0];
+    let index = 0;
+    for (let i = 1; i <= array.length; i++) {
         if (array[i] > max) {
             max = array[i];
-            // In ra giá trị trung bình của các phần tử trong mảng.
+            index = i + 1;
             total = total + array[i]
-            average = total / array.length;
+
         }
     }
-    alert("max: " + max + " gía trị trung bình: " + average);
+    average = total / array.length;
+    alert("max là: " + max + " gía trị trung bình: " + average);
 </script>
 </body>
 </html>

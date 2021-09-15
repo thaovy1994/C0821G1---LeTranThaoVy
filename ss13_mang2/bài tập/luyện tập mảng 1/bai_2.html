@@ -7,16 +7,21 @@
 <body>
 <script>
     //Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
-    let array = Array(3);
+    // Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng
+    // và vị trí của phần tử đó.
+    let array = Array(10);
+
+    for (let i = 0; i < array.length; i++) {
+        let number = parseInt(prompt('nhập số nguyên thứ ' + i));
+        array[i] = number;
+    }
     let max = array[0];
     let index = 0;
-    for (let i = 1; i < array.length; i++) {
-        let number = parseInt(prompt('nhập số nguyên thứ ' + i));
-        console.log(number);
-        // Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+
+    for (let i = 1; i <= array.length; i++) {
         if (array[i] > max) {
             max = array[i];
-            index = i;
+            index = i + 1;
         }
     }
     alert("max: " + max + " at position " + index);
