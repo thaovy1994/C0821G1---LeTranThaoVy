@@ -8,10 +8,15 @@
 <script>
     //Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
     // Chương trình này đếm số ký tự số trong mảng.
-    let array = ['a', 'b', 'c', 1, 2, 3];
+
+    let array = ['a','b','c',1,2,3,'d','e','f'];
+    let count = 0;
     for (let i = 0; i < array.length; i++) {
-        console.log(array.length);
+        if (!isNaN(array[i])) {
+            count++;
+        }
     }
+    document.write('ký tự số trong mảng' + count);
 </script>
 </body>
 </html>
