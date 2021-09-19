@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+</p>
+<script>
+    //Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function square() {
+        let a = parseInt(prompt("Enter number"));
+        let square = a * a;
+        return square
+    }
+
+    alert(square());
+    //Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    let r = parseInt(prompt("Enter radius"));
+    let PI = 3.14;
+
+    function area() {
+        let area = PI * r * r;
+        return area
+    }
+
+    function perimeter() {
+        let perimeter = 2 * r * PI;
+        return perimeter;
+    }
+
+    alert('Chu vi hình tròn là: ' + perimeter() + ' Diện tích hình tròn là: ' + area());
+    //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    let num = parseInt(prompt("Nhập số nguyên"));
+
+    function giaiThua(num) {
+        let result = 1;
+        for (let i = 1; i < num; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+
+    let result = giaiThua(num);
+    alert('giai thừa của ' + num + ' là ' + result);
+    //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    function checkNum(num) {
+        let check;
+        if (isNaN(num)) {
+            check = true;
+        } else {
+            check = false;
+        }
+        return check;
+    }
+
+    //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    let a;
+    let b;
+    let c;
+    let min;
+
+    function checkMin(a, b, c) {
+        if (a < b && a < c) {
+            min = a;
+        } else if (a > b && b < c) {
+            min = b;
+        } else {
+            min = c;
+        }
+        return min;
+    }
+
+    alert("Số có giá trị nhỏ nhất là: " + checkMin(a, b, c));
+    //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+    function checkNum(num) {
+        let check;
+        if (num >= 0) {
+            check= true;
+        }else {
+            check= false;
+        }
+        return check;
+    }
+    alert(checkNum(num));
+</script>
+</body>
+</html>
