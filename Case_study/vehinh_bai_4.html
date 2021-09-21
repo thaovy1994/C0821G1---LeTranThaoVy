@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tam giác cân rỗng</title>
+</head>
+<body>
+<script>
+    for (let row = 0; row <= 5; row++) {
+        for (let col = 5; col > row; col--) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let k = 1; k <= row * 2 - 1; k++) {
+            if (row === 5 || k === 1 || k === row * 2 - 1) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write('<br><br>');
+    }
+</script>
+</body>
+</html>

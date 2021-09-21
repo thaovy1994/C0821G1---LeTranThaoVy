@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<input type="text" id="input1" placeholder="New Product">
+<button type="button" onclick="addNewProduct()">Add</button>
+
+<div id="table"></div>
+<script>
+    let listProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi note 4", "Iphone 6S","Xiaomi 5S Plus"];
+
+    let check = true;
+
+    let viTri;
+
+    function addNewProduct() {
+        if(check===true) {
+            let nameProduct = document.getElementById("input1").value;
+            document.getElementById("input1").value = "";
+            if (nameProduct != "") {
+                listProduct.push(nameProduct);
+                displayProduct();
+            }
+        }
+    }
+
+    function displayProduct() {
+        let table = "<table>" +
+            "<tr> <th>Product Name</th></tr>";
+        for (let i = 0; i < listProduct.length; i++) {
+            table += "<tr>" +
+                "<td>" + listProduct[i] + "</td>" +
+                "<td><button onclick='edit(" + i + ")'>Edit</button></td>" +
+                "<td><button onclick='del(" + i + ")'>Delete</button></td>" +
+                "</tr>"
+        }
+        document.getElementById("table").innerHTML = table;
+    }
+    displayProduct();
+
+    function edit(index) {
+        listProduct[index] = prompt("Tên chỉnh sửa");
+        displayProduct();
+        alert("chỉnh sửa thành công!")
+    }
+
+    function del(index) {
+        if (confirm("Bạn muốn xóa Sản phẩm : " + listProduct[index] + " không?")){
+            listProduct.splice(index,1);
+            displayProduct();
+            alert("Đã xóa thành công!")
+        }
+    }
+</script>
+</body>
+</html>

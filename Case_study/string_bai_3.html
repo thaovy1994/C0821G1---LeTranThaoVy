@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "aabcc";
+    let str2 = "adcaa";
+    let array1 = str1.split('');
+    let array2 = str2.split('');
+    let array3 = Array();
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array2[j] === array1[i]) {
+                array3.push(array2[j]);
+                array1.splice(i, 1);
+                array2.splice(j, 1);
+            }
+        }
+    }
+    document.write('số lượng kí tự chung là ' + array3.length);
+</script>
+</body>
+</html>

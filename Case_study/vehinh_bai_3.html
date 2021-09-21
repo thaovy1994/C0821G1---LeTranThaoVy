@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tam giác cân đặc</title>
+</head>
+<body>
+<script>
+    //Vẽ tam giác cân đặc//
+    for (let row = 0; row <= 5 ; row++) {
+        for (let col = 5; col > row; col--) {
+            document.write('&nbsp&nbsp');
+        }
+        for (let k = 1; k <= row * 2 - 1; k++) {
+            document.write('*');
+        }
+        document.write('<br><br>');
+    }
+</script>
+</body>
+</html>
