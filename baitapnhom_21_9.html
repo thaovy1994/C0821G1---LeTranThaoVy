@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //viết một chương trình tìm ra người có điểm cao thứ N trong danh sách điểm của các quan chức.
+    // Cho một mảng chứa các giá trị số và một số nguyên dương n. Tìm ra số lớn thứ n trong mảng đó.
+    // Nếu không có giá trị thoả mãn, trả về -1.
+    // Note : Không tính các số trùng lặp trong mảng.
+    
+    let length = parseInt(prompt("Nhập độ dài mảng"));
+
+    let array = Array(length);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = prompt("nhâp số thứ " + (i + 1));
+    }
+    array.sort(function (a, b) {
+        return b - a;
+    });
+    let arr1 = Array.from(new Set(array));
+    let n = parseInt(prompt("Nhập số nguyên bất kì"));
+    let index = n - 1;
+    if (n <= arr1.length) {
+        document.write("Phần tử lớn thứ " + n +  " trong mảng là " + arr1[index]);
+    } else {
+        alert("-1");
+    }
+</script>
+</body>
+</html>

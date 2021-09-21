@@ -7,26 +7,29 @@
 <body>
 <script>
     //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
-    function move(a, b) {
-        arr = Array(2);
+    let a = parseInt(prompt('Nhập số thứ 1'));
+    let b = parseInt(prompt('Nhập số thứ 2'));
+
+    function move(x, y) {
+        let temp;
+        temp = x;
+        x = y;
+        y = temp;
+        alert('Số đầu tiên là ' + x + ' và số thứ hai là ' + y);
+    }
+
+    //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    function reverseArray(arr) {
+        let length = parseInt(prompt("Nhập vào độ dài mảng"));
+        arr = Array(length);
         for (i = 0; i < arr.length; i++) {
             arr[i] = parseInt(prompt("Nhập vào phần tử thứ " + (i + 1)));
         }
-        move(a, b));
-        alert(move(a, b));
+        arr = arr.reverse();
+        document.write("Mảng đảo ngược là " + arr);
+    }
 
-        //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
-        function reverseArray(arr) {
-            let length = parseInt(prompt("Nhập vào độ dài mảng"));
-            arr = Array(length);
-            for (i = 0; i < arr.length; i++) {
-                arr[i] = parseInt(prompt("Nhập vào phần tử thứ " + (i + 1)));
-            }
-            arr = arr.reverse();
-            document.write("Mảng đảo ngược là " + arr);
-        }
-
-        alert(reverseArray());
+    alert(reverseArray());
 
 </script>
 </body>

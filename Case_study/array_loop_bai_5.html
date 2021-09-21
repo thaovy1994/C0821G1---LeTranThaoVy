@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu;
+    do {
+        menu = parseInt(prompt('Menu:' + '\n' +
+            '1. Cafe' + '\n' +
+            '2. Cam vắt' + '\n' +
+            '3. Nước ép cà rốt' + '\n' +
+            '4. Nước ép cà chua' + '\n' +
+            '5. Nước lọc' + '\n' +
+            '6. Nước dừa' + '\n' +
+            '7. Thoát' + '\n'));
+        switch (menu) {
+            case 1 :
+                let drink1 = parseInt(prompt('Cafe có giá là 10k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink1 * 10000);
+                break;
+            case 2 :
+                let drink2 = parseInt(prompt('Cam vắt có giá là 20k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink2 * 20000);
+                break;
+            case 3 :
+                let drink3 = parseInt(prompt('Nước ép cà rốt có giá là 15k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink3 * 15000);
+                break;
+            case 4 :
+                let drink4 = parseInt(prompt('Nước ép cà chua có giá là 15k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink4 * 15000);
+                break;
+            case 5:
+                let drink5 = parseInt(prompt('Nước lọc có giá là 10k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink5 * 10000);
+                break;
+            case 6 :
+                let drink6 = parseInt(prompt('Nước dừa có giá là 15k' + '\n' +
+                    'Xin hãy chọn số lượng'));
+                alert('Bạn cần phải trả ' + drink6 * 15000);
+                break;
+            default:
+                alert("kết thúc chọn món");
+        }
+    }
+    while (menu < 7);
+</script>
+</body>
+</html>

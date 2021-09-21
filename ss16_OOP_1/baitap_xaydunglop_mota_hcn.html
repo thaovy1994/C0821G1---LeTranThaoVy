@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="200"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, length) {
+            this.width = width;
+            this.length = length;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getLength() {
+            return this.length;
+        }
+
+        setWidth(widthMoi) {
+            this.width = widthMoi;
+        }
+
+        setLength(lengthMoi) {
+            this.length = lengthMoi;
+        }
+
+        getChuVi() {
+            return (length + width) * 2;
+        }
+
+        getArea() {
+            return length * width;
+        }
+        createRectangle(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(100, 100,this.width,this.length);
+            ctx.stroke();
+        }
+    }
+    let width = parseInt(prompt("Enter width"));
+    let length = parseInt(prompt('Enter length'));
+    let Area1 = new Rectangle();
+    let chuVi1 = new Rectangle();
+    document.write("Diện tích hcn là: " + Area1.getArea());
+    document.write("<br>");
+    document.write("Chu vi hcn là: " + chuVi1.getChuVi());
+    let rectangle = new Rectangle (150,100);
+    rectangle.createRectangle();
+</script>
+</body>
+</html>

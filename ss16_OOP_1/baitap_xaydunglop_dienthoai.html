@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(battery, message, inboxM, storeM) {
+            this.battery = battery;
+            this.message = message;
+            this.inboxM = inboxM;
+            this.storeM = storeM;
+        }
+        getBattery(){
+            return this.battery;
+        }
+        getInboxM(){
+            return this.message;
+        }
+        getMessage(){
+            return this.inboxM;
+        }
+        getStoreM(){
+            return this.storeM;
+        }
+        switchOn(){
+            document.write("bạn đang bật đt " + this.battery + " -1%");
+        }
+        type(){
+            document.write("bạn đang nhập tn " + this.message);
+        }
+    }
+    let useMobile = new Mobile();
+    useMobile.switchOn();
+</script>
+</body>
+</html>

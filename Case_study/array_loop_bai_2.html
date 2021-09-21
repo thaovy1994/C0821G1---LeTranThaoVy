@@ -10,14 +10,35 @@
     // Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
     // Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
     // Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]
-    let arrayA = [7, 2, 5, 3, 5, 3];
-    let arrayB = [7, 2, 5, 4, 6, 3, 5, 3];
+    let a = parseInt(prompt('Nhập số phần tử trong mảng a'));
+    let b = parseInt(prompt('Nhập số phần tử trong mảng b'));
+    let arrA = Array(a);
+    let arrB = Array(b);
+    let arrC = Array(c);
 
-    for (let i = 0; i < arrayA.length; i++) {
-        if (arrayB[j] !== arrayA[i]) {
-            document.write("missingValue(A,b)= " + j);
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = parseInt(prompt("Nhập vào mảng a ký tự thứ " + (i + 1)));
+    }
+    for (let i = 0; i < arrB.length; i++) {
+        arrB[i] = parseInt(prompt("Nhập vào mảng b ký tự thứ " + (i + 1)));
+    }
+    let check = true;
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrB.length; j++) {
+            if (arrA[i] === arrB[j]) {
+                check = true;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if (check) {
+            arrC.push(arrA[i]);
         }
     }
+
+
+
 </script>
 </body>
 </html>
