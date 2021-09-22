@@ -7,33 +7,70 @@
 <body>
 <script>
     class Mobile {
-        constructor(battery, message, inboxM, storeM) {
-            this.battery = battery;
-            this.message = message;
-            this.inboxM = inboxM;
-            this.storeM = storeM;
+        constructor(battery, receivedMessage, sentMessage, status) {
+            this.battery = 100;
+            this.receivedMessage = [];
+            this.sentMessage = [];
+            this.status = true;
         }
-        getBattery(){
-            return this.battery;
+
+        //chức năng bật tắt
+        getStatus() {
+            return this.status;
         }
-        getInboxM(){
-            return this.message;
+
+        setStatus() {
+            // this.status = !this.status;
+            if (this.status) {
+                let check = confirm("Bạn có muốn tắt điện thoại không!");
+                if (check) {
+                    alert("Đã tắt điện thoại!");
+                    this.status = false;
+                }
+            } else {
+                alert("Đã bặt điện thoại!");
+                this.status = true;
+            }
         }
-        getMessage(){
-            return this.inboxM;
+
+        //Phương thức sendMessage có 2 tham số là nội dung tin nhắn và địa chỉ muốn gửi tới
+        //    iphone là đối được nhận tin nhắn.
+        //    khi gọi phương thức receiveMessage thì là đối tượng iphone gọi.
+        sendMessage(sentMessage, iphone) {
+            // Lưu tin nhắn đã gửi.
+            this.sentMessage.push(sentMessage);
+            // Dùng đối tượng điện thoại nhận tin nhắn để gọi phương thức receiveMessage, tham số là tin nhắn đã gửi
+            iphone.receiveMessage(sentMessage);
+            this.battery--;
         }
-        getStoreM(){
-            return this.storeM;
+
+        receiveMessage(receivedMessage) {
+            this.receivedMessage.push(receivedMessage);
+            this.battery--;
         }
-        switchOn(){
-            document.write("bạn đang bật đt " + this.battery + " -1%");
-        }
-        type(){
-            document.write("bạn đang nhập tn " + this.message);
+
+        checkPin() {
+            if (this.battery === 0) {
+                alert("Sạc đê!")
+            }
+
         }
     }
-    let useMobile = new Mobile();
-    useMobile.switchOn();
+
+    //class phoneGap extends Mobile{
+
+    //}
+
+    let iphone = new Mobile();
+    let nokia = new Mobile();
+    nokia.checkPin();
+    nokia.sendMessage("have a nice day!", iphone);
+    iphone.setStatus();
+    console.log("Tin đã gửi: " + nokia.sentMessage);
+    console.log("Tin Đã nhận: " + iphone.receivedMessage);
+    console.log("Pin còn: " + iphone.battery);
+
+
 </script>
 </body>
 </html>

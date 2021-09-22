@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weightApple = 10;
+        }
+
+        getWeightApple() {
+            return this.weightApple;
+        }
+
+        decreaseWeight() {
+            this.weightApple--;
+        }
+
+        ate() {
+            document.write("Affter eating, apple weighs: " + this.weightApple);
+        }
+
+        isEmpty() {
+            if (this.weightApple = 0) {
+                alert("Appple is empty");
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weightHuman = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWeight() {
+            return this.weightHuman;
+        }
+
+        say() {
+            console.log(this.name + " say that: my weight is: " + this.weightHuman);
+        }
+
+        eatApple(apple) {
+            this.weightHuman++;
+            apple.decreaseWeight();
+            document.write("When " + this.name + " eat apple, the weight increase: " + this.weightHuman + " kg");
+            document.write("<br>");
+        }
+
+        display() {
+            document.write(this.name + ", " + this.gender + ", " + this.weightHuman + " kg");
+            document.write("<br>");
+        }
+
+    }
+
+    let apple = new Apple();
+    let adam = new Human("Adam", "male", 70);
+    let eva = new Human("Eva", "female", 50);
+    //apple.decreaseWeight();
+    adam.say();
+    eva.say();
+    //adam.eatApple("Adam", apple);
+    //eva.eatApple("Eva", apple);
+    adam.display();
+    eva.display();
+    adam.eatApple(apple);
+    eva.eatApple(apple);
+    apple.ate();
+</script>
+</body>
+</html>
