@@ -6,67 +6,95 @@
 </head>
 <body>
 <script>
-    class SwitchButton {
+    class ElectricLamp {
         constructor() {
+            this.status = false;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOn() {
+            this.status = true;
+            document.write("đã bật đèn");
+        }
+        turnOff() {
+            this.status = true;
+            document.write("đã tắt đèn");
+        }
+    }
+    // turnOnOff() {
+    //     if (this.statusLamp) {
+    //         console.log("đèn đang bật");
+    //     } else {
+    //         console.log("đèn đang tắt");
+    //     }
+    // }
+
+    // electricLamp() {
+    // }
+    class SwitchButton {
+        constructor(lamp) {
             this.statusButton = true;
-            //this.lamp = Electriclamp;
+            this.lamp = lamp;
         }
 
         getStatus() {
             return this.statusButton;
         }
 
-        //getLamp() {
-        //  return this.lamp;
-        //}
-
-        switchOnOff() {
-            if (this.statusButton) {
-                let check = confirm("Bạn có muốn bật đèn không?");
-                if (check) {
-                    alert("Công tắc đang bật");
-                    this.statusButton = false;
-                } else {
-                    alert("Công tắc đang tắt");
-                    this.statusButton = true;
-                }
-            }
-        }
-
-        //connectToLamp(lamp) {
-        //    this.switchOnOff();
-        //    lamp.turnOnOff();
-        //    console.log("switch on "
-    }
-
-    class ElectricLamp {
-        contructor() {
-            this.statusLamp = true;
-        }
-
-        getStatus() {
-            return this.statusLamp;
-        }
-
-        turnOnOff() {
-            if (this.statusLamp) {
-                console.log("đèn đang bật");
+        switchOn() {
+            if (!this.statusButton) {
+                this.statusButton = true;
+                this.lamp.turnOn();
+                console.log("đã bật công tắc");
             } else {
-                console.log("đèn đang tắt");
+                console.log("công tắc đang bật");
             }
         }
-
-        electricLamp() {
+        switchOff() {
+            if (!this.statusButton) {
+                this.statusButton = true;
+                this.lamp.turnOff();
+                console.log("đã tắt công tắc");
+            } else {
+                console.log("công tắc đang tắt");
+            }
         }
     }
+
+    //getLamp() {
+    //  return this.lamp;
+    //}
+
+    // switchOnOff() {
+    //     if (this.statusButton) {
+    //         let check = confirm("Bạn có muốn bật đèn không?");
+    //         if (check) {
+    //             alert("Công tắc đang bật");
+    //             this.statusButton = false;
+    //         } else {
+    //             alert("Công tắc đang tắt");
+    //             this.statusButton = true;
+    //         }
+    //     }
+    // }
+
+
+    //connectToLamp(lamp) {
+    //    }
 
     let switch1 = new SwitchButton();
-    let lamp = new ElectricLamp();
+    let lamp1 = new ElectricLamp();
     //lamp.electricLamp();
     //switch1.connectToLamp();
-    switch1.switchOnOff();
+    switch1.switchOn();
+    switch1.switchOff();
     //switch1.connectToLamp(lamp);
-    lamp.turnOnOff();
+    lamp1.turnOn();
+    document.write("<br>");
+    lamp1.turnOff();
 </script>
 </body>
 </html>

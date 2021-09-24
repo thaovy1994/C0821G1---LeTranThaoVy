@@ -7,6 +7,45 @@
 <body>
 <script>
     let str = prompt('Nhập vào chuỗi kí tự');
+    let str1 = str.toLowerCase();
+    let array = str1.split(' ');
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === '') {
+            array.splice(i, 1)
+            i--;
+        }
+    }
+    let arr1 = new Array();
+    for (let i = 0; i < array.length; i++) {
+        arr1[i] = array[i].split('');
+
+        for (let j = 0; j < array[i].length; j++) {
+            if (j === 0) {
+                arr1[i][j] = array[i][j].toUpperCase();
+            } else {
+                arr1[i][j] = array[i][j];
+            }
+        }
+
+    }
+
+
+    let arr2 = [];
+    for (let i = 0; i < arr1.length; i++) {
+
+        arr2[i] = arr1[i].join("");
+    }
+    document.write(arr2.join(' '));
+
+    let index = 0;
+    let max = arr2[0].length;
+    for (i = 1; i < arr2.length; i++) {
+        if (arr2[i].length >= max) {
+            max = arr2[i].length;
+            index = i;
+        }
+    }
+    alert("Từ dài nhất trong chuỗi là:" + arr2[index]);
 
 </script>
 </body>

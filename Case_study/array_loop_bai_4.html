@@ -6,10 +6,19 @@
 </head>
 <body>
 <script>
-let n =prompt("nhập số bất kì");
-let number =['1','2','3','4'];
-let word =['mot','hai','ba','bon'];
-
+    let n = prompt("nhập số bất kì");
+    let number = ['1', '2', '3', '4'];
+    let word = ['một', 'hai', 'ba', 'bốn'];
+    let array = n.split('');
+    let array1 = [];
+    for (let j = 0; j < array.length; j++) {
+        for (let i = 0; i < number.length; i++) {
+            if (array[j] === number[i]) {
+                array1.push(word[i])
+            }
+        }
+    }
+    document.write(array1);
 </script>
 </body>
 </html>

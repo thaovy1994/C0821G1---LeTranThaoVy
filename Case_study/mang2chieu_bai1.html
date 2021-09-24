@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("Enter number row"));
+    let n = parseInt(prompt("Enter number col"));
+    let arrM = new Array(m);
+    let sum=0;
+    for (let row = 0; row < m; row++) {
+        arrM[row] = new Array(n);
+        for (let col = 0; col < n; col++) {
+            arrM[row][col] = prompt("input at [" + row + "] [" + col + "]");
+            if (arrM[row] % 2 === 0 && arrM[col] % 2 === 0) {
+                sum = sum + arrM[row][col];
+            }
+        }
+    }
+        document.write(sum);
+</script>
+</body>
+</html>

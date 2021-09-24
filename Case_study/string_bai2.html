@@ -13,18 +13,15 @@
     let str = prompt('Nhập vào xâu kí tự');
     let array1 = str.split('');
     let array2 = Array();
-    let check;
     for (let i = 0; i < array1.length; i++) {
-        if (i === array1[i]) {
-            check = false
-        } else {
-            check = true
+        for (let j = 0; j <= i; j++) {
+            if (array[j] !== array[i]) {
+                array2.push(array1[i]);
+            }
         }
     }
-    if (check) {
-        array2.push(array1[i]);
-    }
     document.write("Số lượng ký tự khác nhau là " + array2.length);
+
 </script>
 </body>
 </html>
