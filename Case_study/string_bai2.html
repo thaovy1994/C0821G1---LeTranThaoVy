@@ -11,16 +11,18 @@
     // Có 3 kí tự khác nhau là a, b và c.
 
     let str = prompt('Nhập vào xâu kí tự');
-    let array1 = str.split('');
-    let array2 = Array();
-    for (let i = 0; i < array1.length; i++) {
-        for (let j = 0; j <= i; j++) {
-            if (array[j] !== array[i]) {
-                array2.push(array1[i]);
+    let array = str.split('');
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                array.splice(j,1);
+                j--;
             }
         }
     }
-    document.write("Số lượng ký tự khác nhau là " + array2.length);
+    document.write("Số lượng ký tự khác nhau là " + array.length);
+    document.write("<br>");
+    document.write("Ký tự khác nhau là: " + array);
 
 </script>
 </body>

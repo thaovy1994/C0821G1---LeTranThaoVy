@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
+    let m = parseInt(prompt("Enter number row"));
+    let n = parseInt(prompt("Enter number col"));
+    let arr = new Array(m);
+
+    for (let row = 0; row < m; row++) {
+        arr[row] = new Array(n);
+        for (let col = 0; col < n; col++) {
+            arr[row][col] = parseInt(prompt("input at [" + row + "] [" + col + "]"));
+        }
+    }
+
+    function findMax(arr) {
+        let max = arr[0][0];
+        for (let row = 0; row < m; row++) {
+            for (let col = 0; col < n; col++) {
+                if (arr[row][col] >= max) {
+                    max = arr[row][col];
+                }
+            }
+        }
+        document.write('max: ' + max);
+    }
+
+    findMax(arr);
+
+    function findMin(arr) {
+        let min = arr[0][0];
+        for (let row = 0; row < m; row++) {
+            for (let col = 0; col < n; col++) {
+                if (arr[row][col] <= min) {
+                    min = arr[row][col];
+                }
+            }
+        }
+        document.write('min: ' + min);
+    }
+
+    findMin(arr);
+</script>
+</body>
+</html>

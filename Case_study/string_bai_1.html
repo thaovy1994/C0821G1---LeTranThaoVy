@@ -7,45 +7,45 @@
 <body>
 <script>
     let str = prompt('Nhập vào chuỗi kí tự');
-    let str1 = str.toLowerCase();
-    let array = str1.split(' ');
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === '') {
-            array.splice(i, 1)
-            i--;
-        }
-    }
-    let arr1 = new Array();
-    for (let i = 0; i < array.length; i++) {
-        arr1[i] = array[i].split('');
-
-        for (let j = 0; j < array[i].length; j++) {
-            if (j === 0) {
-                arr1[i][j] = array[i][j].toUpperCase();
-            } else {
-                arr1[i][j] = array[i][j];
-            }
-        }
-
-    }
-
-
-    let arr2 = [];
-    for (let i = 0; i < arr1.length; i++) {
-
-        arr2[i] = arr1[i].join("");
-    }
-    document.write(arr2.join(' '));
+    let arr = [];
+    let arr1 = [];
 
     let index = 0;
-    let max = arr2[0].length;
-    for (i = 1; i < arr2.length; i++) {
-        if (arr2[i].length >= max) {
-            max = arr2[i].length;
-            index = i;
+    let max = arr1[0];
+
+    function main(str) {
+        let str1 = str.toLowerCase(); //biến để hứng chuỗi trên
+        arr = str1.split(' ');
+        //Xóa đi khoảng trống giữa các chữ (nếu có nhiều hơn 1 khoảng trống)
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === '') {
+                arr.splice(i, 1); //việc xóa này đồng nghĩa vị trí bên phải dồn qua bên trái
+                i--; //định vị lại vị trí do việc splice ở trên//
+            }
+        }
+        //duyệt thành mảng 2 chiều để có thể viết hoa chữ cái đầu mỗi mảng.
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].split("");
+            arr[i][0] = arr[i][0].toUpperCase();
+        }
+        //join từng mảng của mảng 2 chiều
+        for (let j = 0; j < arr.length; j++) {
+            arr1[j] = arr[j].join('');
+            console.log(arr1[j]);
+        }
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] > max) {
+                max = arr1[i];
+                index = i + 1;
+            }
         }
     }
-    alert("Từ dài nhất trong chuỗi là:" + arr2[index]);
+
+    main(str);
+    console.log(arr);
+    document.write("Chuỗi ký tự đã được chuẩn hóa: " + arr1.join(" ") + "<br>");
+    document.write("Từ dài nhất trong chuỗi: " + arr1[index]);
 
 </script>
 </body>

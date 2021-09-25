@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIETLOT</title>
+</head>
+<body>
+<p>
+    <input type="text" id="num1" placeholder="Num1" style="width: 50px">
+    <input type="text" id="num2" placeholder="Num2" style="width: 50px">
+    <input type="text" id="num3" placeholder="Num3" style="width: 50px">
+    <input type="text" id="num4" placeholder="Num4" style="width: 50px">
+    <input type="text" id="num5" placeholder="Num5" style="width: 50px">
+    <input type="text" id="num6" placeholder="Num6" style="width: 50px"><br>
+</p>
+<p>
+    <input type="text" id="num7" placeholder="Num7" style="width: 50px">
+    <input type="text" id="num8" placeholder="Num8" style="width: 50px">
+    <input type="text" id="num9" placeholder="Num9" style="width: 50px">
+    <input type="text" id="num10" placeholder="Num10" style="width: 50px">
+    <input type="text" id="num11" placeholder="Num11" style="width: 50px">
+    <input type="text" id="num12" placeholder="Num12" style="width: 50px"><br>
+</p>
+<button onclick="buyticket()">Buy Ticket</button>
+<button onclick="checkresult()">Check Result</button>
+<script>
+    function buyticket() {
+        //hai tuỳ chọ trên mỗi vé:
+        //chọn tự nhập: mỗi ô  click vào sẽ hiển thị 1 bảng chọn số từ 0-99
+        //chọn tuỳ chọn random: hệ thống tự động tạo ra 6 số tương ứng 6 ô tròn
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let num3 = document.getElementById("num3").value;
+        let num4 = document.getElementById("num4").value;
+        let num5 = document.getElementById("num5").value;
+        let num6 = document.getElementById("num6").value;
+        let num7 = document.getElementById("num7").value = Math.floor(Math.random() * 99);
+    }
+
+    let bag = [];
+    for (let i = 0; i < bag.length; i++) {
+        if (bag.length > 4) {
+            alert("Can not buy");
+        }
+    }
+
+    //Hệ thống check dãy số trên vé vs dãy số của hệ thống.
+    // Sẽ có 3 giải bao gồm:
+    // Giải nhất: 6 số trên vé của KH === 6 số của hệ thống
+    // Giải nhì: 5 số cuối của vé KH === 5 số cuối của hệ thống
+    // Giải khuyến khích: 3 số cuối của vé KH === 3 số cuối của hệ thống
+    function checkresult() {
+
+        let ticket = new Ticket(num1, num2, num3, num4, num5, num6);
+        bag.push(ticket);
+    }
+
+    class Ticket {
+        constructor(number1, number2, number3, number4, number5, number6,) {
+            this._number1 = number1;
+            this._number2 = number2;
+            this._number3 = number3;
+            this._number4 = number4;
+            this._number5 = number5;
+            this._number6 = number6;
+        }
+
+        // KH trúng giải nào thì hệ thống sẽ hiển thị kết quả là số tiền sẽ nhận được tương ứng
+        // KH không trúng giải nào thì alert(“Chúc bạn may mắn lần sau”)
+        display() {
+
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        setNumber1(value) {
+            this.number1 = value;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        setNumber2(value) {
+            this.number2 = value;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        setNumber3(value) {
+            this.number3 = value;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        setNumber4(value) {
+            this.number4 = value;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        setNumber5(value) {
+            this.number5 = value;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setNumber6(value) {
+            this.number6 = value;
+        }
+    }
+</script>
+</body>
+</html>
