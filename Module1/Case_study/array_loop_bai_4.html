@@ -10,15 +10,15 @@
     let number = ['1', '2', '3', '4'];
     let word = ['một', 'hai', 'ba', 'bốn'];
     let array = n.split('');
-    let array1 = [];
+    let result = [];
     for (let j = 0; j < array.length; j++) {
         for (let i = 0; i < number.length; i++) {
             if (array[j] === number[i]) {
-                array1.push(word[i])
+                result.push(word[i])
             }
         }
     }
-    document.write(array1);
+    document.write(result);
 </script>
 </body>
 </html>

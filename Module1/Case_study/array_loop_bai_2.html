@@ -10,27 +10,31 @@
     // Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
     // Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
     // Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]
-    let n = parseInt(prompt('Nhập số phần tử trong mảng a'));
-    let m = parseInt(prompt('Nhập số phần tử trong mảng b'));
     let arrA = [];
     let arrB = [];
-    let arrC = [];
+    let result = []; //chứa phần tử có trong B nhưng ko có trong A
 
+    let n = parseInt(prompt('Nhập số phần tử trong mảng a'));
     for (let i = 0; i < n; i++) {
         arrA[i] = parseInt(prompt("Nhập vào mảng a ký tự thứ " + (i + 1)));
     }
+
+    let m = parseInt(prompt('Nhập số phần tử trong mảng b'));
     for (let i = 0; i < m; i++) {
         arrB[i] = parseInt(prompt("Nhập vào mảng b ký tự thứ " + (i + 1)));
     }
-    let check = false;
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < m; j++) {
-            if (arrA[i] !== arrB[j]) {
-                arrC.push(arrB[j]);
-            }
+
+    //xét mảng b
+    for (let i = 0; i < m; i++) {
+        //nếu phần tử B ko xuất hiện trong A thì
+        if (arrA.indexOf(arrB[i]) === -1 && result.indexOf(arrB[i]) === -1) {
+            result.push(arrB[i]);
         }
     }
-    document.write(arrC);
+    result.sort(function (a, b) {
+        return a - b
+    });
+    document.write("mảng đã được sắp xếp có trong b không có trong a" + result);
 
 </script>
 </body>

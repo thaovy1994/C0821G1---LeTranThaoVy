@@ -7,14 +7,15 @@
 <body>
 <script>
     let n = parseInt(prompt('độ dài mảng a'));
-    let a = [n];
-    let b = [n];
-    for (let i = 0; i <= n; i++) {
+    let a = [];
+    let b = [];
+    let temp = 0; //biến tạm
+    for (let i = 0; i < n; i++) {
         a[i] = parseInt(prompt('nhập vào số nguyên thứ ' + i));
     }
-    for (let i = 1; i < n; i++) {
-        b[0] = a[0];
-        b[i] = a[i] + a[i - 1];
+    for (let i = 0; i < n; i++) {
+        temp += a[i]; //mỗi lần lặp sẽ công từng kí tự trong mảng a lại mỗi lần lặp
+        b[i] = temp;
 
     }
     document.write(b);
